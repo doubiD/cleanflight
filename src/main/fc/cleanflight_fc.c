@@ -905,10 +905,8 @@ void taskUpdateRxMain(void)
 
 #ifdef SONAR
     // updateRcCommands() sets rcCommand[], updateAltHoldState depends on valid rcCommand[] data.
-    if (haveUpdatedRcCommandsOnce) {
-        if (sensors(SENSOR_SONAR)) {
-            updateSonarAltHoldState();
-        }
+    if (sensors(SENSOR_SONAR)) {
+        updateSonarAltHoldState();
     }
 #endif
 }
